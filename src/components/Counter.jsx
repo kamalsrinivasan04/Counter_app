@@ -11,7 +11,11 @@ function Counter() {
   };
 
   const decreaseCount = () => {
-    setCount(count - 1);
+    if(count > 0 === true){
+      setCount(count - 1);
+
+    }
+    
   };
 
   const resetCount = () => {
@@ -60,11 +64,11 @@ function Counter() {
         </p>
       )}
 
-      {count < 0 && (
+      {/* {count < 0 && (
         <p className="negative">
           Negative Number
         </p>
-      )}
+      )} */}
 
       {count === 0 && (
         <p className="zero">
