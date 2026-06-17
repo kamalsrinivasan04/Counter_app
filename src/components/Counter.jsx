@@ -29,9 +29,13 @@ function Counter() {
     }
 
     if (event.key === "-") {
-      setCount((prevCount) => prevCount - 1);
+      setCount((prevCount) => {
+        if (prevCount > 0) {
+          return prevCount - 1;
+        }
+        return 0;
+      });
     }
-
     if (event.key === "Backspace") {
       setCount(0);
     }
